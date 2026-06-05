@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notepad</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="water-shape water-shape-large" aria-hidden="true"></div>
+    <div class="water-shape water-shape-small" aria-hidden="true"></div>
+    <main class="app-shell">
+      <header class="topbar">
+        <div class="title-group">
+          <span class="app-mark" aria-hidden="true">N</span>
+          <input id="documentTitle" class="title-input" type="text" value="Untitled" aria-label="Document title" />
+        </div>
+
+        <div class="toolbar" aria-label="Document actions">
+          <button class="icon-button" id="newDoc" type="button" title="New document" aria-label="New document">
+            +
+          </button>
+          <label class="icon-button file-button" title="Open text file" aria-label="Open text file">
+            <span aria-hidden="true">O</span>
+            <input id="fileInput" type="file" accept=".txt,.md,.text,text/plain" />
+          </label>
+          <button class="icon-button" id="downloadDoc" type="button" title="Download text file" aria-label="Download text file">
+            S
+          </button>
+          <button class="icon-button" id="copyDoc" type="button" title="Copy all text" aria-label="Copy all text">
+            C
+          </button>
+        </div>
+      </header>
+
+      <nav class="tabbar" id="tabbar" role="tablist" aria-label="Open documents"></nav>
+
+      <section class="editor-panel" aria-label="Text editor">
+        <textarea
+          id="editor"
+          spellcheck="true"
+          autofocus
+          aria-label="Notepad editor"
+          placeholder="Write your notes with love..."
+        ></textarea>
+        <div class="text-sticker sticker-love" aria-hidden="true">💧 ❤</div>
+        <div class="text-sticker sticker-flower" aria-hidden="true">🌸 💦</div>
+      </section>
+
+      <footer class="statusbar">
+        <span id="saveState">Draft saved</span>
+        <span id="lineCount">1 line</span>
+        <span id="wordCount">0 words</span>
+        <span id="charCount">0 characters</span>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
