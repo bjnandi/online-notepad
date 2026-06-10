@@ -8,7 +8,7 @@
   --line: #dfb946;
   --rule: #7db4c8;
   --margin-line: #e26d5a;
-  --margin-line-soft: rgba(226, 109, 90, 0.38);
+  --margin-line-soft: rgba(203, 124, 112, 0.75);
   --accent: #1685a5;
   --accent-strong: #0d667e;
   --focus: #c4502d;
@@ -278,11 +278,11 @@ textarea {
   background:
     linear-gradient(
       90deg,
-      transparent 0 70px,
-      var(--margin-line-soft) 70px 72px,
-      transparent 72px 77px,
-      var(--margin-line) 77px 79px,
-      transparent 79px
+      transparent 0 30px,
+      var(--margin-line-soft) 30px 32px,
+      transparent 32px 33px,
+      var(--margin-line) 33px 35px,
+      transparent 35px
     ),
     var(--paper);
 }
@@ -295,17 +295,17 @@ textarea {
   height: 100%;
   min-height: 0;
   resize: none;
-  padding: 28px clamp(32px, 5vw, 72px) 28px 86px;
+  padding: 1px 10px 1px 50px;
   border: 0;
   outline: none;
   background:
     linear-gradient(
       90deg,
-      transparent 0 70px,
-      var(--margin-line-soft) 70px 72px,
-      transparent 72px 77px,
-      rgba(226, 109, 90, 0.78) 77px 79px,
-      transparent 79px
+      transparent 0 30px,
+      var(--margin-line-soft) 30px 32px,
+      transparent 32px 33px,
+      var(--margin-line) 33px 35px,
+      transparent 35px
     ),
     radial-gradient(ellipse at 92% 14%, rgba(61, 194, 218, 0.2), transparent 20%),
     linear-gradient(to bottom, transparent 31px, rgba(22, 133, 165, 0.32) 32px),
@@ -369,61 +369,137 @@ textarea {
   font-weight: 600;
 }
 
-@media (max-width: 620px) {
+/* ── Tablet (621 – 900 px) ─────────────────────────────────────────── */
+@media (max-width: 900px) {
   .app-shell {
-    width: calc(100vw - 20px);
-    height: calc(100vh - 20px);
-    min-height: calc(100vh - 20px);
-    margin: 10px auto;
+    width: calc(100vw - 32px);
+    height: calc(100vh - 32px);
+    min-height: calc(100vh - 32px);
+    margin: 16px auto;
+  }
+
+  .title-group {
+    max-width: 100%;
+  }
+}
+
+/* ── Mobile (≤ 620 px) ─────────────────────────────────────────────── */
+@media (max-width: 620px) {
+  /* make sure the whole viewport is used with no bounce-scroll */
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .app-shell {
+    width: 100vw;
+    height: 100dvh; /* dynamic viewport height – accounts for browser chrome */
+    min-height: 100dvh;
+    margin: 0;
     border: 0;
-    border-radius: 8px;
+    border-radius: 0;
   }
 
+  /* ── Topbar: stack title above toolbar ── */
   .topbar {
-    align-items: stretch;
     flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    min-height: unset;
+    padding: 8px 10px;
   }
 
+  .title-group {
+    max-width: 100%;
+  }
+
+  /* ── Toolbar: four equal buttons in one row ── */
+  .toolbar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    width: 100%;
+  }
+
+  .icon-button {
+    width: 100%;
+    height: 36px;
+  }
+
+  /* ── Tabbar ── */
   .tabbar {
     min-height: 36px;
     padding-inline: 6px;
   }
 
   .document-tab {
-    min-width: 104px;
-    max-width: 170px;
+    min-width: 100px;
+    max-width: 160px;
+    font-size: 12px;
   }
 
-  .toolbar {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .icon-button {
-    width: 23%;
-  }
-
-  .statusbar {
-    gap: 10px;
-    overflow-x: auto;
+  /* ── Editor: remove the wide left margin on narrow screens ── */
+  .editor-panel {
+    background:
+      linear-gradient(
+        90deg,
+        transparent 0 30px,
+        var(--margin-line-soft) 30px 32px,
+        transparent 32px 33px,
+        var(--margin-line) 33px 35px,
+        transparent 35px
+      ),
+      var(--paper);
   }
 
   #editor {
-    padding-left: 84px;
-    padding-right: 24px;
+    padding: 18px 18px 18px 44px;
+    font-size: 15px;
+    line-height: 30px;
+    background:
+      linear-gradient(
+        90deg,
+        transparent 0 30px,
+        var(--margin-line-soft) 30px 32px,
+        transparent 32px 33px,
+        var(--margin-line) 33px 35px,
+        transparent 35px
+      ),
+      radial-gradient(ellipse at 92% 14%, rgba(61, 194, 218, 0.2), transparent 20%),
+      linear-gradient(to bottom, transparent 29px, rgba(22, 133, 165, 0.32) 30px),
+      linear-gradient(180deg, rgba(255, 249, 190, 0.84), rgba(255, 229, 123, 0.62)),
+      var(--paper);
+    background-repeat: no-repeat, no-repeat, repeat, no-repeat, no-repeat;
+    background-size: 100% 100%, 100% 100%, 100% 30px, 100% 100%, 100% 100%;
   }
 
+  /* ── Status bar: scrollable, smaller text ── */
+  .statusbar {
+    gap: 10px;
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 11px;
+    overflow-x: auto;
+    /* hide scrollbar visually but keep it functional */
+    scrollbar-width: none;
+  }
+
+  .statusbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* ── Decorative stickers: hide on very small screens ── */
   .text-sticker {
-    font-size: 18px;
+    display: none;
   }
 
-  .sticker-love {
-    top: 16px;
-    right: 12px;
+  /* ── Decorative water shapes: scale down ── */
+  .water-shape-large {
+    width: min(50vw, 200px);
   }
 
-  .sticker-flower {
-    right: 12px;
-    bottom: 16px;
+  .water-shape-small {
+    display: none;
   }
 }
