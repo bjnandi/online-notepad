@@ -489,9 +489,28 @@ textarea {
     display: none;
   }
 
-  /* ── Decorative stickers: hide on very small screens ── */
+  /* ── Decorative stickers: center both stickers on mobile ── */
   .text-sticker {
-    display: none;
+    display: block;
+    opacity: 0.3;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    font-size: clamp(25px, 8vw, 35px);
+    padding: 0 8px;
+  }
+
+  .sticker-love {
+    top: 42%;
+    bottom: auto;
+  }
+
+  .sticker-flower {
+    top: 58%;
+    bottom: auto;
   }
 
   /* ── Decorative water shapes: scale down ── */
