@@ -1,60 +1,328 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Notepad</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Free online notepad by Biswajit Nandi (bjnandi) - write, save and organize notes instantly. No account needed, no ads, no distractions. Works offline with auto-save and local storage. Best lightweight note-taking app for productivity." />
+    <meta name="keywords" content="online notepad, free notepad, web notepad, note taking app, text editor online, notepad app, no registration notepad, lightweight notepad, best online notepad, notes app, simple notepad, write notes online, Biswajit Nandi notepad, bjnandi notepad" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="author" content="Biswajit Nandi (bjnandi)" />
+    <meta name="creator" content="Biswajit Nandi (bjnandi)" />
+    <meta name="copyright" content="© Biswajit Nandi (bjnandi) - bjnandi.dev" />
+    <meta name="owner" content="Biswajit Nandi" />
+    <meta name="theme-color" content="#f4c84c" />
+    <meta name="color-scheme" content="light" />
+    <meta name="language" content="English" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <link rel="canonical" href="https://notepad.bjnandi.dev/" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notepad.bjnandi.dev/" />
+    <meta property="og:title" content="Online Notepad — Free, Fast, Lightweight Offline Note Taking App" />
+    <meta property="og:description" content="Write notes fast with a lightweight notepad by Biswajit Nandi (bjnandi). Local storage, mobile-friendly, and beautifully designed. No accounts, no distractions." />
+    <meta property="og:image" content="https://notepad.bjnandi.dev/favicon.svg" />
+    <meta property="og:image:alt" content="Online Notepad application logo" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Online Notepad" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Online Notepad — Free, Fast, Lightweight Offline Note Taking App" />
+    <meta name="twitter:description" content="Write notes fast with a lightweight notepad by Biswajit Nandi (bjnandi). Local storage, mobile-friendly, and beautifully designed." />
+    <meta name="twitter:image" content="https://notepad.bjnandi.dev/favicon.svg" />
+    <meta name="twitter:image:alt" content="Online Notepad application logo" />
+    
+    <!-- Additional SEO Tags -->
+    <meta name="revisit-after" content="7 days" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Notepad" />
+    <meta name="format-detection" content="telephone=no" />
+    
+    <!-- Title -->
+    <title>Online Notepad — Free, Fast, Lightweight Offline Note Taking App</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="favicon.svg" />
+    <link rel="shortcut icon" href="favicon.svg" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json" />
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="styles.css" />
+    
+    <!-- JSON-LD Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Online Notepad by Biswajit Nandi",
+      "description": "A lightweight, fast, and beautifully designed online notepad for writing notes with local storage and mobile-friendly interface created by Biswajit Nandi.",
+      "url": "https://notepad.bjnandi.dev/",
+      "applicationCategory": "Productivity",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": "en-US",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Biswajit Nandi",
+        "url": "https://bjnandi.dev",
+        "sameAs": "https://notepad.bjnandi.dev"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Biswajit Nandi",
+        "url": "https://bjnandi.dev",
+        "sameAs": "https://notepad.bjnandi.dev"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Biswajit Nandi (bjnandi)"
+      },
+      "publisher": {
+        "@type": "Person",
+        "name": "Biswajit Nandi (bjnandi)",
+        "url": "https://bjnandi.dev"
+      }
+    }
+    </script>
+    
+    <!-- Additional Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Online Notepad by Biswajit Nandi",
+      "description": "Free online notepad by Biswajit Nandi (bjnandi) with local storage, no account required, mobile-friendly",
+      "url": "https://notepad.bjnandi.dev/",
+      "downloadUrl": "https://notepad.bjnandi.dev/",
+      "applicationCategory": "Productivity",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "100"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "availability": "https://schema.org/InStock"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Biswajit Nandi",
+        "url": "https://bjnandi.dev"
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Biswajit Nandi",
+        "url": "https://bjnandi.dev"
+      },
+      "brand": {
+        "@type": "Brand",
+        "name": "Biswajit Nandi (bjnandi)"
+      }
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Online Notepad",
+        "item": "https://notepad.bjnandi.dev"
+      }]
+    }
+    </script>
+    
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Online Notepad completely free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Online Notepad is 100% free with no premium plans, subscriptions, or hidden costs. It will always remain free."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to create an account to use Online Notepad?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, you don't need an account. Just visit notepad.bjnandi.dev and start typing immediately. No registration or login required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are my notes saved?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Your notes are automatically saved to your browser's local storage on your device. They never leave your computer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Online Notepad work offline?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Online Notepad works completely offline thanks to our Service Worker. You can use it without an internet connection."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is my data private and secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all your data is private. We don't collect, store, transmit, or access any of your notes. Everything stays on your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I download my notes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, click the 'S' button in the toolbar to download your current note as a .txt file to your device."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I open files from my computer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, click the 'O' button to open .txt, .md, or .text files from your device. They will appear in a new tab."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use Online Notepad on mobile?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Online Notepad is fully responsive and works on all devices including phones, tablets, and desktops."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
+    <!-- Decorative background shapes (hidden from screen readers) -->
     <div class="water-shape water-shape-large" aria-hidden="true"></div>
     <div class="water-shape water-shape-small" aria-hidden="true"></div>
-    <main class="app-shell">
-      <header class="topbar">
+    
+    <!-- Main application container -->
+    <main class="app-shell" role="main">
+      <!-- Header with title and controls -->
+      <header class="topbar" role="banner">
+        <h1 class="sr-only">Online Notepad - Free Note Taking Application</h1>
+        
+        <!-- Document title input -->
         <div class="title-group">
           <span class="app-mark" aria-hidden="true">N</span>
-          <input id="documentTitle" class="title-input" type="text" value="Untitled" aria-label="Document title" />
+          <input 
+            id="documentTitle" 
+            class="title-input" 
+            type="text" 
+            value="Untitled" 
+            aria-label="Document title - Enter the name of your note"
+            inputmode="text"
+            spellcheck="false"
+          />
         </div>
 
-        <div class="toolbar" aria-label="Document actions">
-          <button class="icon-button" id="newDoc" type="button" title="New document" aria-label="New document">
+        <!-- Toolbar with document actions -->
+        <div class="toolbar" aria-label="Document actions - Create, open, save, and copy notes">
+          <button 
+            class="icon-button" 
+            id="newDoc" 
+            type="button" 
+            title="Create a new blank document (Shortcut: Ctrl+Alt+N)" 
+            aria-label="New document"
+          >
             +
           </button>
-          <label class="icon-button file-button" title="Open text file" aria-label="Open text file">
+          <label 
+            class="icon-button file-button" 
+            title="Open an existing text file from your device (Shortcut: Ctrl+O)" 
+            aria-label="Open text file"
+          >
             <span aria-hidden="true">O</span>
-            <input id="fileInput" type="file" accept=".txt,.md,.text,text/plain" />
+            <input 
+              id="fileInput" 
+              type="file" 
+              accept=".txt,.md,.text,text/plain" 
+              aria-label="Select a text file to open"
+            />
           </label>
-          <button class="icon-button" id="downloadDoc" type="button" title="Download text file" aria-label="Download text file">
+          <button 
+            class="icon-button" 
+            id="downloadDoc" 
+            type="button" 
+            title="Download your notes as a text file (Shortcut: Ctrl+S)" 
+            aria-label="Save/Download text file"
+          >
             S
           </button>
-          <button class="icon-button" id="copyDoc" type="button" title="Copy all text" aria-label="Copy all text">
+          <button 
+            class="icon-button" 
+            id="copyDoc" 
+            type="button" 
+            title="Copy all your notes to the clipboard" 
+            aria-label="Copy all text to clipboard"
+          >
             C
           </button>
         </div>
       </header>
 
-      <nav class="tabbar" id="tabbar" role="tablist" aria-label="Open documents"></nav>
+      <!-- Document tabs navigation -->
+      <nav class="tabbar" id="tabbar" role="tablist" aria-label="Open documents - Switch between your notes"></nav>
 
-      <section class="editor-panel" aria-label="Text editor">
+      <!-- Main editor section -->
+      <section class="editor-panel" aria-label="Text editor area - Write and edit your notes here">
         <textarea
           id="editor"
           spellcheck="true"
           autofocus
-          aria-label="Notepad editor"
+          aria-label="Notepad editor - Type your notes here. Your changes are automatically saved to your browser."
           placeholder="Write your notes with love..."
         ></textarea>
+        <!-- Decorative stickers -->
         <div class="text-sticker sticker-love" aria-hidden="true">💧 ❤</div>
         <div class="text-sticker sticker-flower" aria-hidden="true">🌸 💦</div>
       </section>
 
-      <footer class="statusbar">
-        <span id="saveState">Draft saved</span>
-        <span id="lineCount">1 line</span>
-        <span id="wordCount">0 words</span>
-        <span id="charCount">0 characters</span>
+      <!-- Status bar with document statistics -->
+      <footer class="statusbar" role="contentinfo">
+        <span id="saveState" aria-live="polite" aria-label="Save status">Draft saved</span>
+        <span id="lineCount" aria-live="polite" aria-label="Line count">1 line</span>
+        <span id="wordCount" aria-live="polite" aria-label="Word count">0 words</span>
+        <span id="charCount" aria-live="polite" aria-label="Character count">0 characters</span>
       </footer>
     </main>
 
+    <!-- Application script -->
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,93 @@
+# Compiled files
+*.min.js
+*.min.css
+*.min.html
+
+# Node modules (if using build tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Build and distribution
+/dist/
+/build/
+/out/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+*.iml
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Cache files
+.cache/
+*.cache
+.eslintcache
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# Logs
+logs/
+*.log
+
+# Test coverage
+coverage/
+.nyc_output
+
+# Dependency directories (commonly used in Node.js)
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# dotenv environment variables file
+.env.example
+
+# OS generated files
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Development database
+*.db
+*.sqlite
+
+# Application logs
+storage.log
+error.log
+
+# Website deployment files
+.htpasswd
+.sftp-config.json
+
+# IDE specific files
+.jshintrc
+.prettierrc
+.eslintrc
